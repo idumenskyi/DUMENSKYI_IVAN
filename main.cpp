@@ -5,10 +5,10 @@
 #include "PacMan.h"
 #include "Windows.h"
 
-#define VK_KEY_A	0x41                
-#define VK_KEY_D	0x44                
-#define VK_KEY_S	0x53                
-#define VK_KEY_W	0x57                
+const char VK_KEY_A	= 0x41;
+const char VK_KEY_D = 0x44;
+const char VK_KEY_S = 0x53;
+const char VK_KEY_W = 0x57;               
 
 using namespace std;
 
