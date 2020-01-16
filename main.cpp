@@ -36,39 +36,42 @@ int main()
 
         system("pause>nul");
 
-        if (GetAsyncKeyState(VK_UP))
-        {
-            pacman.Move(-1, 0);
+      int vKey = 0x44;
+        switch (vKey)
+            {                
+             case VK_KEY_W:
+                    vKey = 0x57;
+                    pacman.Move(-1, 0);
+                    break;
+             case VK_UP:
+                    vKey = 0x26;
+                    pacman.Move(-1, 0);
+                    break;
+             case VK_KEY_S:
+                    vKey = 0x53;
+                    pacman.Move(1, 0);
+                    break;
+             case VK_DOWN:
+                    vKey = 0x28;
+                    pacman.Move(1, 0);
+                    break;
+             case VK_KEY_A:
+                    vKey = 0x41;
+                    pacman.Move(0, -1);
+                    break;
+             case VK_LEFT:
+                    vKey = 0x25;
+                    pacman.Move(0, -1);
+                    break;             
+            case VK_KEY_D:
+                vKey = 0x44;
+                pacman.Move(0, 1);
+                break;
+            case VK_RIGHT:
+                vKey = 0x27;
+                pacman.Move(0, 1);
+                break;
         }
-        if (GetAsyncKeyState(VK_KEY_W))
-        {
-            pacman.Move(-1, 0);
-        }
-        if (GetAsyncKeyState(VK_DOWN))
-        {
-            pacman.Move(1, 0);
-        }
-        if (GetAsyncKeyState(VK_KEY_S))
-        {
-            pacman.Move(1, 0);
-        }
-        if (GetAsyncKeyState(VK_RIGHT))
-        {
-            pacman.Move(0, 1);
-        }
-        if (GetAsyncKeyState(VK_KEY_D))
-        {
-            pacman.Move(0, 1);
-        }
-        if (GetAsyncKeyState(VK_LEFT))
-        {
-            pacman.Move(0, -1);
-        }
-        if (GetAsyncKeyState(VK_KEY_A))
-        {
-            pacman.Move(0, -1);
-        }
-    }
 
     system("pause");
 }
