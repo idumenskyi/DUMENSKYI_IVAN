@@ -36,41 +36,35 @@ int main()
 
         system("pause>nul");
 
-      int vKey = 0x44;
-        switch (vKey)
-            {                
-             case VK_KEY_W:
-                    vKey = 0x57;
+        int PKey = 0;
+        PKey = _getch();
+        switch (PKey)
+        { 
+            
+             case 0x57:
                     pacman.Move(-1, 0);
                     break;
-             case VK_UP:
-                    vKey = 0x26;
+             case 0x26:
                     pacman.Move(-1, 0);
                     break;
-             case VK_KEY_S:
-                    vKey = 0x53;
+             case 0x53:
                     pacman.Move(1, 0);
                     break;
-             case VK_DOWN:
-                    vKey = 0x28;
+             case 0x28:
                     pacman.Move(1, 0);
-                    break;
-             case VK_KEY_A:
-                    vKey = 0x41;
+                    break;          
+             case 0x41:
                     pacman.Move(0, -1);
                     break;
-             case VK_LEFT:
-                    vKey = 0x25;
+             case 0x25:
                     pacman.Move(0, -1);
                     break;             
-            case VK_KEY_D:
-                vKey = 0x44;
-                pacman.Move(0, 1);
-                break;
-            case VK_RIGHT:
-                vKey = 0x27;
-                pacman.Move(0, 1);
-                break;
+             case 0x44:
+                    pacman.Move(0, 1);
+                    break;
+             case 0x27:
+                    pacman.Move(0, 1);
+                    break;
         }
 
     system("pause");
