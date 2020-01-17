@@ -35,7 +35,8 @@ int main()
         }
 
         system("pause>nul");
-
+        //doesnt work
+        /*
         int PKey = 0;
         PKey = _getch();
         switch (PKey)
@@ -66,6 +67,42 @@ int main()
                     pacman.Move(0, 1);
                     break;
         }
+        */
+           if (GetAsyncKeyState(VK_UP))
+        {
+            pacman.Move(-1, 0);
+        }
+        if (GetAsyncKeyState(VK_KEY_W))
+        {
+            pacman.Move(-1, 0);
+        }
+        if (GetAsyncKeyState(VK_DOWN))
+        {
+            pacman.Move(1, 0);
+        }
+        if (GetAsyncKeyState(VK_KEY_S))
+        {
+            pacman.Move(1, 0);
+        }
+
+        if (GetAsyncKeyState(VK_KEY_D))
+        {
+            pacman.Move(0, 1);
+        }
+        if (GetAsyncKeyState(VK_RIGHT))
+        {
+            pacman.Move(0, 1);
+        }
+        if (GetAsyncKeyState(VK_LEFT))
+        {
+            pacman.Move(0, -1);
+        }
+        if (GetAsyncKeyState(VK_KEY_A))
+        {
+            pacman.Move(0, -1);
+        }
+           
+    }
 
     system("pause");
 }
